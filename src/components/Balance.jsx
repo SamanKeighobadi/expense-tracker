@@ -1,8 +1,8 @@
 const Balance = () => {
     return ( 
         <div>
-            Blana
-            
+            <h4>Balance</h4>
+            <p>$0.00</p>
         </div>
      );
 }
