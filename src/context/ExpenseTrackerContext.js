@@ -1,5 +1,6 @@
 import { useState, createContext } from "react";
 import { toast } from "react-toastify";
+import {v4 as uuidv4} from 'uuid'
 
 export const ExpenseTracker = createContext({
   transactions: [],
@@ -9,8 +10,8 @@ export const ExpenseTracker = createContext({
 
 const ExpenseTrackerProvider = ({ children }) => {
   const [transactions, setTransactions] = useState([
-    { id: 1, text: "coffee", amount: 120 },
-    { id: 2, text: "coffee", amount: -20 },
+    { id: 1, text: "salary", amount: 300 },
+    { id: 2, text: "Book", amount: -60 },
   ]);
 
   /**
@@ -21,7 +22,7 @@ const ExpenseTrackerProvider = ({ children }) => {
   const addTransaction = (text, amount) => {
     setTransactions([
       ...transactions,
-      { id: Math.floor(Math.random() * 100), text, amount },
+      { id: uuidv4(), text, amount },
     ]);
     toast.success("Transaction successfully added", {
       position: "top-right",

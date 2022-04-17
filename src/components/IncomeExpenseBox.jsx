@@ -1,4 +1,5 @@
 import { Row, Col } from "react-bootstrap";
+// Context API 
 import {useContext} from 'react'
 import { ExpenseTracker } from "../context/ExpenseTrackerContext";
 

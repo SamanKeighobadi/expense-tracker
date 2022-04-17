@@ -10,10 +10,10 @@ const NewTransaction = () => {
   const { addTransaction } = useContext(ExpenseTracker);
 
   return (
-    <div>
-      <Form className="px-2">
+    <>
+      <Form className=" px-2 mt-3">
         <FormGroup>
-          <lable>input</lable>
+          <Form.Label>input</Form.Label>
           <FormControl
             type="text"
             placeholder="transaction..."
@@ -23,7 +23,7 @@ const NewTransaction = () => {
           />
         </FormGroup>
         <FormGroup>
-          <label>Value</label>
+          <Form.Label>Value</Form.Label>
           <FormControl
             type="number"
             placeholder="amount"
@@ -31,6 +31,9 @@ const NewTransaction = () => {
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
           />
+          <Form.Text>
+            (negetive and postive)
+          </Form.Text>
         </FormGroup>
         <Button
           size="sm"
@@ -40,7 +43,7 @@ const NewTransaction = () => {
           Submit
         </Button>
       </Form>
-    </div>
+    </>
   );
 };
 
