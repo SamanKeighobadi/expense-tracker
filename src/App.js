@@ -1,10 +1,11 @@
+import ExpenseTrackerProvider from "./context/ExpenseTrackerContext";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-     saman jon
-    </div>
+    <ExpenseTrackerProvider>
+      <div>saman jon</div>
+    </ExpenseTrackerProvider>
   );
-}
+};
 
 export default App;
