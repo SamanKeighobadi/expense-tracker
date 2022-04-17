@@ -1,10 +1,13 @@
 // React Boostrap components
 import { Form, FormGroup, FormControl, Button } from "react-bootstrap";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { ExpenseTracker } from "../../context/ExpenseTrackerContext";
 
 const NewTransaction = () => {
   const [value, setValue] = useState("");
   const [amount, setAmount] = useState(0);
+    // context api 
+  const { addTransaction } = useContext(ExpenseTracker);
 
   return (
     <div>
@@ -23,14 +26,17 @@ const NewTransaction = () => {
           <label>Value</label>
           <FormControl
             type="number"
-            min={0}
             placeholder="amount"
             size="sm"
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
           />
         </FormGroup>
-        <Button size="sm" className="w-100 mt-3" onClick={() => alert(value,amount)}>
+        <Button
+          size="sm"
+          className="w-100 mt-3"
+          onClick={() => addTransaction(value, amount)}
+        >
           Submit
         </Button>
       </Form>
