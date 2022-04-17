@@ -8,7 +8,7 @@ export const ExpenseTracker = createContext({
 
 const ExpenseTrackerProvider = ({ children }) => {
   const [transactions, setTransactions] = useState([
-    { id: 1, text: "coffee", amount: 20 },
+    { id: 1, text: "coffee", amount: 120 },
     { id: 2, text: "coffee", amount: -20 },
   ]);
 
