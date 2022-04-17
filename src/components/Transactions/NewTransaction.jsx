@@ -35,7 +35,7 @@ const NewTransaction = () => {
         <Button
           size="sm"
           className="w-100 mt-3"
-          onClick={() => addTransaction(value, amount)}
+          onClick={() => addTransaction(value, +amount)}
         >
           Submit
         </Button>

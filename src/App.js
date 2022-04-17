@@ -7,6 +7,7 @@ import NewTransaction from "./components/Transactions/NewTransaction";
 import IncomeExpenceBox from "./components/IncomeExpenseBox";
 // React bootstrap components
 import { Container, Card } from "react-bootstrap";
+import {ToastContainer} from 'react-toastify'
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
           <NewTransaction />
         </Card>
       </Container>
+      <ToastContainer />
     </ExpenseTrackerProvider>
   );
 };
