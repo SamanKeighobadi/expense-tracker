@@ -1,13 +1,19 @@
 // React Bootstrap components
-import {Alert} from 'react-bootstrap'
+import {Card} from 'react-bootstrap'
+import {useContext} from 'react'
+import { ExpenseTracker } from '../../context/ExpenseTrackerContext';
 
+const Transaction = ({transaction}) => {
 
-const Transaction = ({amount,title}) => {
+    const sign = transaction.amount<0 ? "-":"+";
+
+    const {deleteTransaction} = useContext(ExpenseTracker)
+
     return ( 
         <div>
-            <Alert variant='success'  >
-                {title}
-            </Alert>
+            <Card onClick={() => deleteTransaction(transaction.id)}  >
+                {transaction.text} - ({sign}{Math.abs(transaction.amount)}) 
+            </Card>
         </div>
      );
 }

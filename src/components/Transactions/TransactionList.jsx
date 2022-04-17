@@ -9,7 +9,7 @@ const TransactionList = () => {
     return ( 
         <div className='px-2'>
             {transactions.map(trx  => (
-                <Transaction amount={trx.amount} title={trx.text} />
+                <Transaction transaction={trx} />
             ))}
         </div>
      );

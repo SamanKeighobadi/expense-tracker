@@ -3,6 +3,7 @@ import { useState, createContext } from "react";
 export const ExpenseTracker = createContext({
   transactions: [],
   addTransaction: () => {},
+  deleteTransaction:()=>{}
 });
 
 const ExpenseTrackerProvider = ({ children }) => {
@@ -18,8 +19,14 @@ const ExpenseTrackerProvider = ({ children }) => {
     ]);
   };
 
+  const deleteTransaction = (id) =>{
+      const allTransaction = [...transactions];
+      const filteredTransaction = allTransaction.filter(tr => tr.id !==id);
+      setTransactions(filteredTransaction) 
+  }
+
   return (
-    <ExpenseTracker.Provider value={{ transactions, addTransaction }}>
+    <ExpenseTracker.Provider value={{ transactions, addTransaction,deleteTransaction }}>
       {children}
     </ExpenseTracker.Provider>
   );
