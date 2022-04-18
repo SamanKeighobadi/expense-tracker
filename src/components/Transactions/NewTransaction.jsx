@@ -9,11 +9,17 @@ const NewTransaction = () => {
     // context api 
   const { addTransaction } = useContext(ExpenseTracker);
 
+  const onSubmit = (value,amount) =>{
+    addTransaction(value,amount)
+    setValue("");
+    setAmount(0)
+  }
+
   return (
     <>
       <Form className=" px-2 mt-3" style={{textAlign:"left"}} >
         <FormGroup className="pb-3">
-          <Form.Label>title of transaction:</Form.Label>
+          <Form.Label>Title of transaction:</Form.Label>
           <FormControl
             type="text"
             placeholder="transaction..."
@@ -38,7 +44,7 @@ const NewTransaction = () => {
         <Button
           size="sm"
           className="w-100 mt-3"
-          onClick={() => addTransaction(value, +amount)}
+          onClick={() => onSubmit(value, +amount)}
         >
           Submit
         </Button>
