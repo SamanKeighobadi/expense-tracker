@@ -8,7 +8,7 @@ const TransactionList = () => {
   const { transactions } = useContext(ExpenseTracker);
 
   return (
-    <div className="px-2">
+    <div className="px-2 " style={{overflowY:"auto",overflowX:"hidden",height:"140px"}}>
       {transactions.map((trx) => (
         <Transaction transaction={trx} />
       ))}
