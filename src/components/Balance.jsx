@@ -1,6 +1,8 @@
+// Context API
 import {useContext} from 'react'
 import { ExpenseTracker } from '../context/ExpenseTrackerContext';
-
+// icons
+import {ScaleIcon} from '@heroicons/react/outline'
 
 const Balance = () => {
 
@@ -11,8 +13,9 @@ const Balance = () => {
 
     return ( 
         <div>
-            <h4>Balance</h4>
-            <p>${total}</p>
+            <ScaleIcon style={{width:'3rem'}} className="text-dark pb-2 " />
+            <h4 style={{fontSize:"0.8rem"}}>Balance</h4>
+            <p className='pb-3 ' style={{fontSize:"1.3rem"}}>${total}</p>
         </div>
      );
 }

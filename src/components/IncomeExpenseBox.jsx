@@ -16,14 +16,14 @@ const IncomeExpenceBox = () => {
 
   return (
     <>
-      <Row className=" mx-auto">
-        <Col>
+      <Row className=" mx-auto text-uppercase ">
+        <Col className="text-success">
           <p>income</p>
-          <p>${income}</p>
+          <p className="font-weight-bold" >${income}</p>
         </Col>
-        <Col>
-          <p> Expense</p>
-          <p>${expense}</p>
+        <Col className="text-danger">
+          <p > Expense</p>
+          <p >${expense}</p>
         </Col>
       </Row>
     </>

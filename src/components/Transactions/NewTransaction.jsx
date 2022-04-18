@@ -11,9 +11,9 @@ const NewTransaction = () => {
 
   return (
     <>
-      <Form className=" px-2 mt-3">
-        <FormGroup>
-          <Form.Label>input</Form.Label>
+      <Form className=" px-2 mt-3" style={{textAlign:"left"}} >
+        <FormGroup className="pb-3">
+          <Form.Label>title of transaction:</Form.Label>
           <FormControl
             type="text"
             placeholder="transaction..."
@@ -23,7 +23,7 @@ const NewTransaction = () => {
           />
         </FormGroup>
         <FormGroup>
-          <Form.Label>Value</Form.Label>
+          <Form.Label> Amount: </Form.Label>
           <FormControl
             type="number"
             placeholder="amount"
@@ -32,7 +32,7 @@ const NewTransaction = () => {
             onChange={(e) => setAmount(e.target.value)}
           />
           <Form.Text>
-            (negetive and postive)
+            (negetive and postive amount)
           </Form.Text>
         </FormGroup>
         <Button

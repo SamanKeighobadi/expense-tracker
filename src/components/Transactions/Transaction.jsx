@@ -1,10 +1,13 @@
 // React Bootstrap components
 import { Card, Row, Col } from "react-bootstrap";
 // Context API
+// Context API
 import { useContext } from "react";
 import { ExpenseTracker } from "../../context/ExpenseTrackerContext";
 // Prop Types
 import PropTypes from 'prop-types';
+// icons
+import{XCircleIcon}from '@heroicons/react/outline'
 
 const Transaction = ({ transaction }) => {
   const sign = transaction.amount < 0 ? "-" : "+";
@@ -13,8 +16,11 @@ const Transaction = ({ transaction }) => {
 
   return (
     <div>
-      <Card className='py-2 my-1'  onClick={() => deleteTransaction(transaction.id)}>
+      <Card className='py-2 my-1'  >
         <Row>
+          <Col onClick={() => deleteTransaction(transaction.id)}>
+            <XCircleIcon style={{width:'1rem',cursor:"pointer"}} className="text-danger" />
+          </Col>
           <Col>{transaction.text} </Col>
           <Col>
             ({sign}

@@ -12,7 +12,7 @@ import {ToastContainer} from 'react-toastify'
 const App = () => {
   return (
     <ExpenseTrackerProvider>
-      <Container className="text-center mt-5 w-25 ">
+      <Container className="text-center mt-5" style={{maxWidth:"400px"}}>
         <Card className='py-4 '>
           <Header />
           <Balance />
