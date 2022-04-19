@@ -3,6 +3,7 @@
 
 ## What packages used: 
 <ul>
-  <li> React Bootstrap v5 </li>
+  <li> React Bootstrap & Bootstrap v5 </li>
   <li> uuid generate random id </li>
+  <li> react toastify for notifications </li>
  <ul/>
